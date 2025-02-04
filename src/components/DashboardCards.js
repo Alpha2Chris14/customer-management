@@ -1,25 +1,39 @@
-// src/components/DashboardCards.js
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { InfoCircleFill } from "react-bootstrap-icons";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/DashboardCards.css"; // Import for additional styles
+
+const DashboardCard = ({ title, count }) => (
+  <Card className="custom-card shadow-sm p-3 border-0 rounded">
+    <Card.Body>
+      <div className="d-flex justify-content-between align-items-center">
+        <Card.Title className="text-muted mb-2">{title}</Card.Title>
+        <OverlayTrigger
+          placement="top"
+          overlay={<Tooltip>Additional Info</Tooltip>}
+        >
+          <InfoCircleFill className="text-muted" />
+        </OverlayTrigger>
+      </div>
+      <h3 className="fw-bold">{count}</h3>
+    </Card.Body>
+  </Card>
+);
 
 const DashboardCards = () => {
   const cardData = [
-    { title: "All Customers", count: 1300 },
-    { title: "Active Customers", count: 1300 },
-    { title: "Overdue Customers", count: 1300 },
+    { title: "All customers", count: 1300 },
+    { title: "Active customers", count: 1300 },
+    { title: "Overdue customers", count: 1300 },
     { title: "Inactive & Dormant", count: 1300 },
   ];
 
   return (
-    <Row className="my-4">
+    <Row xs={1} md={4} className="g-4">
       {cardData.map((card, index) => (
-        <Col md={3} key={index}>
-          <Card className="shadow-sm">
-            <Card.Body>
-              <Card.Title>{card.title}</Card.Title>
-              <h3>{card.count}</h3>
-            </Card.Body>
-          </Card>
+        <Col key={index}>
+          <DashboardCard title={card.title} count={card.count} />
         </Col>
       ))}
     </Row>

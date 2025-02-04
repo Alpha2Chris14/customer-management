@@ -7,15 +7,22 @@ import {
   SplitButton,
   Dropdown,
 } from "react-bootstrap";
-import { PersonPlus, PlusCircle } from "react-bootstrap-icons";
+import { PersonPlus, Search } from "react-bootstrap-icons";
+import { SearchIcon } from "lucide-react";
 import "./css/CustomHeader.css";
-const CustomerHeader = () => {
+const TableHeader = () => {
   return (
     <Container>
       <Row className="align-items-center mb-3">
         <Col>
-          <h2 className="custom-header">Customers</h2>
-          <p className="custom-body">Create, edit and manage your customers.</p>
+          <div class="search-box">
+            <SearchIcon size={24} color="#BBBBCB" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search customer details"
+            />
+          </div>
         </Col>
         <Col className="text-end">
           <SplitButton
@@ -37,4 +44,4 @@ const CustomerHeader = () => {
   );
 };
 
-export default CustomerHeader;
+export default TableHeader;

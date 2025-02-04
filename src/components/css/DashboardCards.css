@@ -1,0 +1,36 @@
+.custom-card {
+    border-radius: 1rem;
+    position: relative;
+    background: #ffffff;
+    z-index: 1;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .custom-card::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 5%;
+    width: 90%;
+    height: 10px;
+    background-color: transparent;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    z-index: -1;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(236, 235, 235, 0.15);
+  }
+  .custom-card .card-title {
+    font-size: 0.87rem;
+    font-weight: 400;
+    color: #5E5F6E;
+  }
+
+  .fw-bold {
+    font-weight: 600 !important;
+    font-size: 2rem;
+    color: #44444B;
+}

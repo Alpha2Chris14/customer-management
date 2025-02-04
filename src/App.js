@@ -5,10 +5,11 @@ import Sidebar from "./components/Sidebar";
 import "./App.css";
 import DashboardCards from "./components/DashboardCards";
 import CustomerTable from "./components/CustomerTable";
-// import { Container } from "react-bootstrap";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import { BrowserRouter as Router } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CustomerHeader from "./components/CustomerHeader";
+import TableHeader from "./components/TableHeader";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <div className="container">
             <CustomerHeader />
             <DashboardCards />
+            <TableHeader />
+            <CustomerTable />
           </div>
         </div>
       </div>
