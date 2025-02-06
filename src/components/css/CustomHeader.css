@@ -18,4 +18,62 @@
   #dropdown-custom-1{
     background-color:"#0053A6" !important;
   }
+
+  .search-bod {
+    display: flex;
+    background: #fff;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 20px;
+    width: 80%;
+    height: 40px;
+    gap:1%;
+  }
+  
+  .search-bod .form-control {
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 0 20px;
+    flex-grow: 1;
+    font-size: 12px;
+  }
+  
+  .search-bod .form-control:focus {
+    outline: none;
+  }
+  
+  .search-bod .btn {
+    background-color: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 18px;
+    padding: 0 5px;
+  }
+  
+  .search-bod .btn-icon {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  .separator{
+    gap: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .btn-mod{
+    background: #fff;
+  }
+
+  .btn-sec{
+    background-color: #F2F6FA;
+  }
+  
+
+  .dropdown-menu.show {
+    z-index: 1050 !important; /* Ensure it appears above other elements */
+    position: absolute !important;
+  }
+  
+
   

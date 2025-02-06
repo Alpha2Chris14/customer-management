@@ -1,15 +1,9 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  SplitButton,
-  Dropdown,
-} from "react-bootstrap";
-import { PersonPlus, PlusCircle } from "react-bootstrap-icons";
+import { Container, Row, Col, SplitButton, Dropdown } from "react-bootstrap";
+import { PersonPlus } from "react-bootstrap-icons";
 import "./css/CustomHeader.css";
-const CustomerHeader = () => {
+
+const CustomerHeader = ({ onAddNewCustomer }) => {
   return (
     <Container>
       <Row className="align-items-center mb-3">
@@ -27,6 +21,7 @@ const CustomerHeader = () => {
               </>
             }
             id="dropdown-custom-1"
+            onClick={onAddNewCustomer} // Trigger the modal
           >
             <Dropdown.Item href="#">Action 1</Dropdown.Item>
             <Dropdown.Item href="#">Action 2</Dropdown.Item>

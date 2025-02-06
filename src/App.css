@@ -76,6 +76,7 @@
 
 
 .container {
-  margin-top: 20px;
+  padding: 20px;
   overflow-y: auto; /* Enable vertical scrolling */
+  
 }
